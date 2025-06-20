@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Compliment Generator</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #compliment {
+      font-size: 1.5em;
+      color: #444;
+      margin: 20px;
+      background: #fff8dc;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #ff6f61;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff4c3b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>✨ Compliment Generator ✨</h1>
+  <div id="compliment">Click the button to get a compliment!</div>
+  <button onclick="generateCompliment()">Give Me One!</button>
+
+  <script>
+    const compliments = [
+      "hey muddy shuddy fellow.do you want compliment🌟",
+      "oyyyy pani pata em ledha niku💡",
+      "You have a great future ahead if you are with me😂",
+      "You're a true friend.Ani nenu annanu 🤝",
+      "You are the one who make me happy. 🌍",
+      "You're so creative  🎨",
+      "Dont feel discouraged.You are doing your best💖",
+      "You’re doing great – keep it up!🚀"
+    ];
+
+    function generateCompliment() {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      document.getElementById("compliment").innerText = compliments[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
